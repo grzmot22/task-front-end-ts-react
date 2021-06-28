@@ -6,8 +6,9 @@ import {
   GetContinents,
   GetContinents_continents,
 } from '../gql/types/GetContinents';
+import Loading from '../components/Loading';
 
-const ListContinentsPage = (props: any) => {
+const ListContinentsPage = () => {
   const client = useApolloClient();
   const { data, loading, error } = useQuery<
     GetContinents,
@@ -15,7 +16,7 @@ const ListContinentsPage = (props: any) => {
   >(GET_CONTINENTS, { client });
 
   if (loading || error) {
-    return <p>{error ? error.message : 'Loading...'}</p>;
+    return error ? <p>error.message </p> : <Loading />;
   }
 
   return (
