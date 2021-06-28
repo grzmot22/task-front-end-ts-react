@@ -86,6 +86,9 @@ const ItemContainer = styled.div`
   background: #634fda66;
   padding: 1.5rem;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 const CountryName = styled.div``;
