@@ -8,7 +8,7 @@
 // ====================================================
 
 export interface GetContinents_continents {
-  __typename: "Continent";
+  __typename: 'Continent';
   name: string;
   code: string;
 }
