@@ -23,3 +23,7 @@ export interface GetContinentCountries_continent {
 export interface GetContinentCountries {
   continent: GetContinentCountries_continent | null;
 }
+
+export interface GetContinentCountriesVariables {
+  code: string;
+}
