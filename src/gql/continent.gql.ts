@@ -7,6 +7,9 @@ export const GET_CONTINENT_COUNTRIES = gql`
       countries {
         name
         emoji
+        languages {
+          name
+        }
       }
     }
   }
