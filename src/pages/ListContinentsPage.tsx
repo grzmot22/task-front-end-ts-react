@@ -39,9 +39,13 @@ export default ListContinentsPage;
 const Container = styled.div`
   display: flex;
   justify-content: space-around;
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledLink = styled(Link)`
+  overflow-wrap: anywhere;
   background: red;
   opacity: 0.8;
   padding: 5px;
@@ -56,4 +60,7 @@ const StyledLink = styled(Link)`
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  @media (max-width: 1000px) {
+    line-height: 50px;
+  }
 `;
