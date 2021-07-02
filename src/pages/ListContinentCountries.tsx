@@ -1,5 +1,5 @@
-import { useQuery } from '@apollo/client';
 import React from 'react';
+import { useQuery } from '@apollo/client';
 import { RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import Emoji from '../components/Emoji';
