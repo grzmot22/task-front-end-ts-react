@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { useApolloClient, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { GET_CONTINENTS } from '../gql/continents.gql';
 import {
   GetContinents,
@@ -11,11 +11,10 @@ import {
 import Loading from '../components/Loading';
 
 const ListContinentsPage = () => {
-  const client = useApolloClient();
   const { data, loading, error } = useQuery<
     GetContinents,
     GetContinents_continents
-  >(GET_CONTINENTS, { client });
+  >(GET_CONTINENTS);
 
   if (loading || error) {
     return error ? <p>error.message </p> : <Loading />;

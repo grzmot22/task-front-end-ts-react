@@ -1,4 +1,4 @@
-import { useApolloClient, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
@@ -13,12 +13,10 @@ import {
 type TParams = { code: string };
 
 const ListContinentCountries = ({ match }: RouteComponentProps<TParams>) => {
-  const client = useApolloClient();
   const { data, loading, error } = useQuery<
     GetContinentCountries,
     GetContinentCountriesVariables
   >(GET_CONTINENT_COUNTRIES, {
-    client,
     variables: { code: match.params.code },
   });
 
