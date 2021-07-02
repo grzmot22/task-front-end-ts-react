@@ -21,7 +21,7 @@ const ListContinentCountries = ({ match }: RouteComponentProps<TParams>) => {
   });
 
   if (loading || error) {
-    return error ? <p>error.message </p> : <Loading />;
+    return error ? <p>{error.message}</p> : <Loading />;
   }
 
   return (
